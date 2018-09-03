@@ -17,6 +17,22 @@ public class MaxTest {
         int result = maxim.max(2, 1);
         assertThat(result, is(2));
     }
-
-
+    @Test
+    public void whenThirdLessSecondLessFirst() {
+        Max maximum = new Max();
+        int result = maximum.max(3, 2, 1);
+        assertThat(result, is(3));
+    }
+    @Test
+    public void whenSecondLessThirdLessFirst() {
+        Max maximum = new Max();
+        int result = maximum.max(2, 3, 1);
+        assertThat(result, is(3));
+    }
+    @Test
+    public void whenFirstLessTherdLessSecond() {
+        Max maximum = new Max();
+        int result = maximum.max(1, 3, 2);
+        assertThat(result, is(3));
+    }
 }
