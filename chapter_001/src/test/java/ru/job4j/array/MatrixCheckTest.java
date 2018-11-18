@@ -28,4 +28,15 @@ public class MatrixCheckTest {
         boolean result = check.mono(input);
         assertThat(result, is(false));
     }
+
+    @Test
+    public void whenQuadroDataMonoByTrueThenTrue() {
+        MatrixCheck check = new MatrixCheck();
+        boolean[][] input = new boolean[][] {
+                {true, true},
+                {false, true},
+        };
+        boolean result = check.mono(input);
+        assertThat(result, is(false));
+    }
 }
